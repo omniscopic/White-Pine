@@ -108,6 +108,11 @@
   .about p{color:var(--text2);max-width:62ch}
   .about p+p{margin-top:12px}
   .about h2{margin-bottom:16px}
+  .film{margin-top:clamp(36px,5vw,56px)}
+  .film .frame{position:relative;aspect-ratio:16/9;background:var(--night);border-radius:3px;overflow:hidden}
+  .film iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+  .film figcaption{max-width:62ch}
+  .film figcaption b{font-family:var(--label);font-style:normal;font-weight:500;text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--rust);margin-right:.6em}
 
   /* Close */
   .close{background:var(--night);color:var(--creamB);text-align:center}
@@ -397,10 +402,18 @@
     <img src="img/portrait.jpg" alt="Rich Blundell smiling in his shop, working on a wooden surfboard frame">
     <div>
       <p class="eyebrow">The Builder</p>
-      <h2>Rich Blundell</h2>
+      <h2>The Provenance of Rich</h2>
       <p>Rich is an ecologist, natural historian, and scientist-in-residence at the Maria Mitchell Association on Nantucket. Duxbury, Massachusetts is his home habitat, and he is a Cape Cod and Islands organism.</p>
       <p>He has been building hollow wooden surfboards for twenty years. His designs and build-methods are used all over the world. No factory, no molds, no shortcuts. Just a design, a stack of wood, and a plane.</p>
     </div>
+  </div>
+  <div class="wrap">
+    <figure class="film">
+      <div class="frame">
+        <iframe src="https://www.youtube-nocookie.com/embed/0vWpVSyRLoQ" title="An Earth Story, a film by Rich Blundell" loading="lazy" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <figcaption><b>An Earth Story</b>A commercial fisherman forgot who he was. He was reminded by a message from an 800-lb bluefin tuna he had caught and killed. That message sent him on a lifelong, scientific mission to understand it, a cosmic journey from the intimate to the epic.</figcaption>
+    </figure>
   </div>
 </section>
 
