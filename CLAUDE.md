@@ -38,8 +38,7 @@ gallery/     gallery photos: name.jpg (full) + name-t.jpg (thumbnail)
 
 Hero (Powder Point Bridge sunset) · The Idea · Who Could Be In It (partners) ·
 Shape of the Residency (where / how long / when / culminates) · The Boards ·
-What It Celebrates · Gallery (filter tabs + lightbox) · Home Habitat (4 featured
-photos) · The Provenance of Rich (bio + "An Earth Story" film) · Closing invitation + links.
+What It Celebrates · Gallery (filter tabs + lightbox) · The Provenance of Rich (bio + "An Earth Story" film) · Closing invitation + links.
 
 ## Design tokens (CSS variables on :root)
 

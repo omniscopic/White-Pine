@@ -90,17 +90,7 @@
   .tline i{font-style:normal;color:var(--sunset);padding-inline:.3em}
   .motto{margin-top:26px;font-style:italic;color:var(--cap);font-size:17px}
 
-  /* Photo row */
-  .row4{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(12px,2vw,22px)}
-  .row4 img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
 
-  /* Duxbury placeholders */
-  .dux{background:var(--band)}
-  .dux h2{margin-bottom:10px}
-  .dux .note{color:var(--text2);margin-bottom:28px;max-width:60ch}
-  .slot{aspect-ratio:4/5;border:2px dashed rgba(122,97,68,.45);border-radius:3px;display:flex;flex-direction:column;justify-content:flex-end;padding:16px;background:repeating-linear-gradient(135deg,rgba(122,97,68,.05) 0 12px,transparent 12px 24px)}
-  .slot b{font-family:var(--display);font-weight:400;font-size:20px;color:var(--deep);line-height:1.2}
-  .slot span{font-family:var(--label);text-transform:uppercase;letter-spacing:.22em;font-size:11px;color:var(--cap);margin-top:6px}
 
   /* About */
   .about{display:grid;grid-template-columns:280px 1fr;gap:clamp(24px,5vw,56px);align-items:center}
@@ -123,7 +113,7 @@
   .links a:hover{color:var(--creamA)}
 
   @media (max-width:860px){
-    .plist,.row4{grid-template-columns:repeat(2,1fr)}
+    .plist{grid-template-columns:repeat(2,1fr)}
   }
   @media (max-width:720px){
     .intro,.blist,.about{grid-template-columns:1fr}
@@ -382,20 +372,6 @@
   setCount();
 })();
 </script>
-
-<section class="dux">
-  <div class="wrap">
-    <p class="eyebrow">Home Habitat</p>
-    <h2>New England, where the pines meet the sea.</h2>
-    <p class="note">Every one of us has a home habitat. These are the pines, flats, and waters that shaped Rich.</p>
-    <div class="row4">
-      <figure><img src="gallery/hh-white-pines-t.jpg" alt="White pines, looking straight up."><figcaption>White pines, looking straight up.</figcaption></figure>
-      <figure><img src="gallery/hh-low-tide-sunset-t.jpg" alt="Low tide at sunset, with a good dog."><figcaption>Low tide at sunset, with a good dog.</figcaption></figure>
-      <figure><img src="gallery/hh-sand-road-t.jpg" alt="The sand road over the dunes."><figcaption>The sand road over the dunes.</figcaption></figure>
-      <figure><img src="gallery/hh-striper-t.jpg" alt="A striped bass. The inspiration for the Striper."><figcaption>A striped bass. The inspiration for the Striper.</figcaption></figure>
-    </div>
-  </div>
-</section>
 
 <section>
   <div class="wrap about">
