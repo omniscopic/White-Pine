@@ -135,8 +135,23 @@
   .fact .k{font-family:var(--label);text-transform:uppercase;letter-spacing:.24em;font-size:12px;color:var(--rust);margin-bottom:6px}
   .fact .v{font-family:var(--display);font-size:clamp(24px,2.6vw,30px);line-height:1.15;color:var(--deep)}
   .fact p{font-size:15.5px;color:var(--text2);margin-top:8px}
-  @media (max-width:860px){.facts{grid-template-columns:repeat(2,1fr)}}
-  @media (max-width:440px){.facts{grid-template-columns:1fr}}
+  .fact .v,.phases .v{text-wrap:balance}
+  .shape .note{color:var(--text2);max-width:60ch;margin-top:12px}
+  .phases-label{margin:clamp(40px,5vw,56px) 0 0}
+  .phases{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:phase}
+  .phases li{position:relative;background:var(--band);border-radius:3px;border-top:3px solid var(--mustard);padding:16px 18px 18px 52px;counter-increment:phase}
+  .phases li::before{content:counter(phase);position:absolute;left:16px;top:16px;width:24px;height:24px;border-radius:50%;background:radial-gradient(circle at 50% 45%,var(--core) 0%,var(--sun) 50%,var(--sunset) 100%);color:var(--night);font-family:var(--label);font-size:12px;font-weight:500;display:grid;place-items:center}
+  .phases .k{font-family:var(--label);text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--rust);margin-bottom:4px}
+  .phases .v{font-family:var(--display);font-size:22px;line-height:1.2;color:var(--deep)}
+  .phases p{font-size:15.5px;color:var(--text2);margin-top:6px}
+  .phases li.flex{background:transparent;border:2px dashed rgba(122,97,68,.45);border-top:3px solid var(--pine)}
+  .phases li.flex .k{color:var(--pine)}
+  .phases li.end{background:var(--deep);border-top-color:var(--sunset)}
+  .phases li.end .k{color:var(--creamC)}
+  .phases li.end .v{color:var(--creamA)}
+  .phases li.end p{color:var(--creamB)}
+  @media (max-width:860px){.facts,.phases{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:440px){.facts,.phases{grid-template-columns:1fr}}
   /* Gallery */
   .gallery h2{margin-bottom:10px}
   .gallery .note{color:var(--text2);max-width:60ch;margin-bottom:8px}
@@ -223,16 +238,26 @@
   </div>
 </section>
 
-<section>
+<section class="shape">
   <div class="wrap">
     <p class="eyebrow">Shape of the Residency</p>
-    <h2>Flexible, and built to fit the school year.</h2>
+    <h2>Eight months, in person as the work needs it.</h2>
+    <p class="note">An 8-month artist residency. Rich is in physical residence only as necessary, in short stays that follow the wood from tree to exhibition.</p>
     <div class="facts">
       <div class="fact"><div class="k">Where</div><div class="v">Art Complex Museum</div><p>Duxbury, Massachusetts.</p></div>
-      <div class="fact"><div class="k">How long</div><div class="v">1 to 6 months</div><p>Scaled to the partners and the number of boards.</p></div>
-      <div class="fact"><div class="k">When</div><div class="v">2026&ndash;27 school year</div><p>Timed so students can join the community build.</p></div>
-      <div class="fact"><div class="k">Culminates</div><div class="v">Spring/Summer 2027</div><p>An exhibition of the boards and the build at the ACM.</p></div>
+      <div class="fact"><div class="k">How long</div><div class="v">8 months</div><p>In residence as needed, not full time.</p></div>
+      <div class="fact"><div class="k">When</div><div class="v">Fall 2026 to Summer 2027</div><p>Timed so students can join the community build.</p></div>
+      <div class="fact"><div class="k">Culminates</div><div class="v">Mid-summer 2027</div><p>A big opening and exhibition of the boards and the build at the ACM.</p></div>
     </div>
+    <p class="eyebrow phases-label">Proposed timeline</p>
+    <ol class="phases">
+      <li><div class="k">Fall</div><div class="v">1 week</div><p>Find the tree. Mill the lumber and set it to season.</p></li>
+      <li><div class="k">Winter</div><div class="v">2 weeks</div><p>Design the board. Cut the frames.</p></li>
+      <li><div class="k">Spring</div><div class="v">2 weeks</div><p>Mill the seasoned wood for the build.</p></li>
+      <li><div class="k">Early summer</div><div class="v">1 month</div><p>Build the rocker table and start building the boards.</p></li>
+      <li class="flex"><div class="k">When it fits the school year</div><div class="v">1 month</div><p>The community build with students.</p></li>
+      <li class="end"><div class="k">Mid-summer</div><div class="v">Opening</div><p>A big opening and exhibition at the ACM.</p></li>
+    </ol>
   </div>
 </section>
 

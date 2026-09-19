@@ -18,8 +18,12 @@ stage. Nothing here is a commitment.
 - The ACM is the host and has expressed enthusiasm. Everyone else (Levitate Music
   Festival and its emerging artists program, a high school wood arts program such
   as Duxbury High School, a white pine source, surf shops) is a *potential* partner.
-- Residency details: at the ACM, 1 to 6 months, timed to the 2026–27 school year,
-  culminating in a Spring/Summer 2027 exhibition.
+- Residency details: an 8-month artist residency at the ACM, Fall 2026 to
+  Summer 2027. Rich is in physical residence only as necessary: fall (1 week,
+  find the tree, mill, season), winter (2 weeks, design, cut frames), spring
+  (2 weeks, milling), early summer (1 month, rocker table, start building), a
+  month for the community build with students when it fits the school year,
+  then a big opening and exhibition in mid-summer 2027.
 - Do not name Scott Woodruff or Stick Figure. The musician board stays generic.
 - Do not say or imply the boards will be surfed. No surfing photos or captions.
 - Use Rich's language wherever possible. Edit for grammar and clarity only.
