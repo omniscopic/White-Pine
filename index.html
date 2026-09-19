@@ -6,7 +6,7 @@
 <meta name="description" content="White Pine Homecoming: a wooden surfboard residency concept hosted at the Art Complex Museum, built from New England white pine.">
 <meta property="og:title" content="White Pine Homecoming">
 <meta property="og:description" content="A wooden surfboard residency concept. Local stoke, New England white pine, and love for the place you come from.">
-<meta property="og:image" content="img/bridge.jpg">
+<meta property="og:image" content="img/boards-on-wall.jpg">
 <style>html,body{margin:0}</style>
 <title>White Pine Homecoming</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,13 +41,12 @@
 
   /* Hero */
   .hero{position:relative;background:var(--night);color:var(--creamA);overflow:hidden}
-  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 38%}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,29,18,.15) 0%,rgba(42,29,18,.2) 40%,rgba(42,29,18,.82) 100%)}
+  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,29,18,.2) 0%,rgba(42,29,18,.42) 35%,rgba(42,29,18,.86) 100%)}
   .hero .wrap{position:relative;z-index:1;min-height:clamp(440px,62vw,620px);display:flex;flex-direction:column;justify-content:flex-end;padding-block:48px}
-  .hero .eyebrow{color:var(--creamC)}
+  .hero .eyebrow{color:var(--creamC);text-shadow:0 1px 10px rgba(0,0,0,.45)}
   .hero h1{color:var(--creamA);font-size:clamp(46px,8.4vw,112px);line-height:.96;text-shadow:0 2px 30px rgba(0,0,0,.35)}
-  .hero .sub{font-style:italic;font-size:clamp(18px,2.2vw,24px);color:var(--creamB);max-width:34ch;margin-top:20px;line-height:1.45}
-  .hero .credit{position:absolute;right:clamp(16px,4vw,40px);top:18px;z-index:1;font-family:var(--label);font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--creamB);opacity:.85}
+  .hero .sub{text-shadow:0 1px 12px rgba(0,0,0,.4);font-style:italic;font-size:clamp(18px,2.2vw,24px);color:var(--creamB);max-width:34ch;margin-top:20px;line-height:1.45}
 
   /* Intro */
   .intro{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(28px,5vw,64px);align-items:center}
@@ -91,6 +90,11 @@
   .motto{margin-top:26px;font-style:italic;color:var(--cap);font-size:17px}
 
 
+
+  /* Scene band */
+  .scene{position:relative;background:var(--night)}
+  .scene img{width:100%;height:clamp(260px,42vw,560px);object-fit:cover;object-position:50% 40%}
+  .scene figcaption{position:absolute;right:clamp(16px,4vw,40px);bottom:14px;padding:0;font-family:var(--label);font-style:normal;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--creamB);text-shadow:0 1px 8px rgba(0,0,0,.5)}
 
   /* About */
   .about{display:grid;grid-template-columns:280px 1fr;gap:clamp(24px,5vw,56px);align-items:center}
@@ -164,12 +168,11 @@
 <body>
 
 <header class="hero">
-  <img src="img/bridge.jpg" alt="Powder Point Bridge in Duxbury running out over the water toward an orange sunset">
-  <div class="credit">Powder Point, Duxbury</div>
+  <img src="img/boards-on-wall.jpg" alt="Three of Rich's hollow wooden surfboards hanging on a sunlit gallery wall, one covered in bark, one in cedar, one in shingles">
   <div class="wrap">
-    <p class="eyebrow">A Wooden Surfboard Residency &middot; New England</p>
+    <p class="eyebrow">A Wooden Surfboard Art Residency &middot; New England</p>
     <h1>White Pine<br>Homecoming</h1>
-    <p class="sub">Local stoke, New England white pine, and love for the place you come from.</p>
+    <p class="sub">Hollow wooden surfboards, handmade from New England white pine. An art residency and exhibition at the Art Complex Museum.</p>
     <div><span class="status">Concept stage &middot; Starting the conversation</span></div>
   </div>
 </header>
@@ -179,8 +182,9 @@
   <div class="wrap intro">
     <div class="body">
       <p class="eyebrow">The Idea</p>
-      <p class="lead">Everyone needs a home. This project is a celebration of home through love of local trees, wood, water and an appreciation of creative craft.</p>
-      <p>Dr. Rich Blundell proposes a wooden surfboard residency at the Art Complex Museum. Locally sourced New England white pine becomes hollow wooden surfboards, built in the open. Young people learn creativity and craftsmanship in a community build. Music from the region's emerging artists carries the stoke.</p>
+      <p class="lead">Dr. Rich Blundell proposes a wooden surfboard residency at the Art Complex Museum.</p>
+      <p>Everyone needs a home. This project is a celebration of home through love of local trees, wood, water and an appreciation of creative craft.</p>
+      <p>Locally sourced New England white pine becomes hollow wooden surfboards, built in the open. Young people learn creativity and craftsmanship in a community build. Music from the region's emerging artists carries the stoke.</p>
       <p>It is a homecoming, and a return with the elixir: a celebration of the beauty of wood, the places we come from, and positive vibes for the future.</p>
     </div>
     <figure>
@@ -372,6 +376,11 @@
   setCount();
 })();
 </script>
+
+<figure class="scene">
+  <img src="img/bridge.jpg" alt="Powder Point Bridge in Duxbury running out over the water toward an orange sunset" loading="lazy">
+  <figcaption>Powder Point, Duxbury</figcaption>
+</figure>
 
 <section>
   <div class="wrap about">
