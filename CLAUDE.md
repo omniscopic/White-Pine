@@ -40,7 +40,7 @@ gallery/     gallery photos: name.jpg (full) + name-t.jpg (thumbnail)
 
 ## Page order
 
-Hero (boards on a gallery wall) · The Idea · Who Could Be In It (partners) ·
+Hero (boards on a gallery wall) · The Idea · The Build (6 photo steps) · Who Could Be In It (partners) ·
 Shape of the Residency (where / how long / when / culminates) · The Boards ·
 What It Celebrates · Gallery (filter tabs + lightbox) · Powder Point Bridge band · The Provenance of Rich (bio + "An Earth Story" film) · Closing invitation + links.
 

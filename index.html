@@ -57,6 +57,22 @@
   figcaption{font-style:italic;font-size:14.5px;color:var(--cap);padding-top:10px;line-height:1.45}
   .intro figure img{width:100%;aspect-ratio:16/10;object-fit:cover;border-radius:3px}
 
+  /* Build */
+  .build{background:var(--deep);color:var(--creamB)}
+  .build .eyebrow{color:var(--creamC)}
+  .build h2{color:var(--creamA);max-width:22ch}
+  .build .note{color:var(--creamB);max-width:60ch;margin-top:14px;font-size:clamp(17px,1.6vw,19px)}
+  .steps{list-style:none;margin:clamp(28px,4vw,40px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,30px)}
+  .steps img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
+  .steps figcaption{color:var(--creamB);opacity:.92}
+  .steps .step,.finished .step{display:block;font-family:var(--label);font-style:normal;text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--creamC);margin-bottom:4px}
+  .finished{margin-top:clamp(28px,4vw,40px)}
+  .finished img{width:100%;aspect-ratio:3/1;object-fit:cover;border-radius:3px}
+  .finished figcaption{color:var(--creamB);opacity:.92}
+  .build .src{margin-top:22px;font-style:italic;font-size:14.5px;color:var(--creamC);opacity:.8}
+  @media (max-width:720px){.steps{grid-template-columns:repeat(2,1fr)}}
+  @media (max-width:440px){.steps{grid-template-columns:1fr}}
+
   /* Partners */
   .partners{background:var(--band)}
   .partners h2{margin-bottom:34px;max-width:22ch}
@@ -209,6 +225,27 @@
   </div>
 </section>
 
+<section class="build">
+  <div class="wrap">
+    <p class="eyebrow">The Build</p>
+    <h2>Every board is built by hand, from the tree up.</h2>
+    <p class="note">Hollow wooden surfboards, built in the open at the museum, from rough-sawn plank to finished board. No factory, no molds, no shortcuts. Just a design, a stack of wood, and a plane.</p>
+    <ol class="steps">
+      <li><figure><img src="gallery/milling-the-log-t.jpg" alt="One tree, one afternoon, and a mill small enough to carry to it." loading="lazy"><figcaption><span class="step">Mill the tree</span>One tree, one afternoon, and a mill small enough to carry to it.</figcaption></figure></li>
+      <li><figure><img src="gallery/planing-strips-t.jpg" alt="Every strip gets a feathered edge by hand, so the glue-up closes without a gap." loading="lazy"><figcaption><span class="step">Plane the strips</span>Every strip gets a feathered edge by hand, so the glue-up closes without a gap.</figcaption></figure></li>
+      <li><figure><img src="gallery/deck-panel-glued-t.jpg" alt="Nine feet of deck plank, board by board, clamped down and left to set." loading="lazy"><figcaption><span class="step">Glue up the planks</span>Nine feet of deck plank, board by board, clamped down and left to set.</figcaption></figure></li>
+      <li><figure><img src="gallery/hull-on-the-bench-t.jpg" alt="The skeleton has a floor at last. Ribs down on the bottom plank, nose block and all." loading="lazy"><figcaption><span class="step">Frame the hull</span>The skeleton has a floor at last. Ribs down on the bottom plank, nose block and all.</figcaption></figure></li>
+      <li><figure><img src="gallery/shaping-the-rails-t.jpg" alt="Rails get worked outside, where the dust has somewhere to go." loading="lazy"><figcaption><span class="step">Shape the rails</span>Rails get worked outside, where the dust has somewhere to go.</figcaption></figure></li>
+      <li><figure><img src="gallery/sanding-block-t.jpg" alt="The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding." loading="lazy"><figcaption><span class="step">Sand it fair</span>The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding.</figcaption></figure></li>
+    </ol>
+    <figure class="finished">
+      <img src="gallery/finished-under-arm.jpg" alt="The finished nine-foot hollow cedar board, carried under one arm" loading="lazy">
+      <figcaption><span class="step">Finished</span>Nine feet of hollow cedar. From tree to board, by hand.</figcaption>
+    </figure>
+    <p class="src">Photos from Rich's recent builds.</p>
+  </div>
+</section>
+
 <section class="partners">
   <div class="wrap">
     <p class="eyebrow">Who Could Be In It</p>
@@ -348,6 +385,9 @@
 <button type="button" data-g="The Build" data-full="gallery/sanding-block.jpg" data-cap="The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding." aria-label="Open photo: The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding."><img src="gallery/sanding-block-t.jpg" alt="The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding." loading="lazy"></button>
 <button type="button" data-g="The Boards" data-full="gallery/rich-with-the-board.jpg" data-cap="Tung oil goes on, and the grain comes up like it has been waiting all summer to be seen." aria-label="Open photo: Tung oil goes on, and the grain comes up like it has been waiting all summer to be seen."><img src="gallery/rich-with-the-board-t.jpg" alt="Tung oil goes on, and the grain comes up like it has been waiting all summer to be seen." loading="lazy"></button>
 <button type="button" data-g="The Boards" data-full="gallery/almost-done-v2.jpg" data-cap="Almost done." aria-label="Open photo: Almost done."><img src="gallery/almost-done-v2-t.jpg" alt="Almost done." loading="lazy"></button>
+<button type="button" data-g="The Boards" data-full="gallery/finished-at-the-shack.jpg" data-cap="Finished. Nine feet of hollow cedar, standing at the shack door." aria-label="Open photo: Finished. Nine feet of hollow cedar, standing at the shack door."><img src="gallery/finished-at-the-shack-t.jpg" alt="Finished. Nine feet of hollow cedar, standing at the shack door." loading="lazy"></button>
+<button type="button" data-g="The Boards" data-full="gallery/finished-sunburst-fins.jpg" data-cap="The bottom, with its sunburst fins." aria-label="Open photo: The bottom, with its sunburst fins."><img src="gallery/finished-sunburst-fins-t.jpg" alt="The bottom, with its sunburst fins." loading="lazy"></button>
+<button type="button" data-g="The Boards" data-full="gallery/finished-under-arm.jpg" data-cap="Nine feet of cedar, under one arm." aria-label="Open photo: Nine feet of cedar, under one arm."><img src="gallery/finished-under-arm-t.jpg" alt="Nine feet of cedar, under one arm." loading="lazy"></button>
 <button type="button" data-g="The Boards" data-full="gallery/board-at-the-shack-door.jpg" data-cap="The board now stands where the raw planks once stood outside the shack door." aria-label="Open photo: The board now stands where the raw planks once stood outside the shack door."><img src="gallery/board-at-the-shack-door-t.jpg" alt="The board now stands where the raw planks once stood outside the shack door." loading="lazy"></button>
 <button type="button" data-g="The Boards" data-full="gallery/fin-halo.jpg" data-cap="Testing a halo on the edge. A pale line that follows the curve the whole way round." aria-label="Open photo: Testing a halo on the edge. A pale line that follows the curve the whole way round."><img src="gallery/fin-halo-t.jpg" alt="Testing a halo on the edge. A pale line that follows the curve the whole way round." loading="lazy"></button>
 <button type="button" data-g="The Boards" data-full="gallery/three-boards-at-the-barn.jpg" data-cap="Three boards, three textures: bark, cedar, and shingle, lined up at the barn door." aria-label="Open photo: Three boards, three textures: bark, cedar, and shingle, lined up at the barn door."><img src="gallery/three-boards-at-the-barn-t.jpg" alt="Three boards, three textures: bark, cedar, and shingle, lined up at the barn door." loading="lazy"></button>
@@ -414,7 +454,7 @@
       <p class="eyebrow">The Builder</p>
       <h2>The Provenance of Rich</h2>
       <p>Rich is an ecologist, natural historian, and scientist-in-residence at the Maria Mitchell Association on Nantucket. Duxbury, Massachusetts is his home habitat, and he is a Cape Cod and Islands organism.</p>
-      <p>He has been building hollow wooden surfboards for twenty years. His designs and build-methods are used all over the world. No factory, no molds, no shortcuts. Just a design, a stack of wood, and a plane.</p>
+      <p>He has been building hollow wooden surfboards for twenty years. His designs and build-methods are used all over the world.</p>
     </div>
   </div>
   <div class="wrap">
