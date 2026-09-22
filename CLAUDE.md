@@ -1,4 +1,7 @@
-# White Pine Homecoming — repo guide for Claude Code
+# Home Is Where the Heartwood Is — repo guide for Claude Code
+
+(Project formerly "White Pine Homecoming". The repo and live URL keep the
+White-Pine name.)
 
 A one-page concept site for a wooden surfboard residency hosted at the Art Complex
 Museum (ACM) in Duxbury, Massachusetts. Built by Rich Blundell. Static HTML, no
@@ -25,7 +28,9 @@ stage. Nothing here is a commitment.
   month for the community build with students when it fits the school year,
   then a big opening and exhibition in mid-summer 2027.
 - Do not name Scott Woodruff or Stick Figure. The musician board stays generic.
-- Do not say or imply the boards will be surfed. No surfing photos or captions.
+- Don't commit either way on whether the residency boards will be surfed. Photos
+  of Rich's earlier boards in the water are fine (In the Water group); don't
+  caption them as the residency boards.
 - Use Rich's language wherever possible. Edit for grammar and clarity only.
 - No em dashes in page copy. Short, simple sentences. Warm and plainspoken, no hype.
 - No emoji.
@@ -40,9 +45,9 @@ gallery/     gallery photos: name.jpg (full) + name-t.jpg (thumbnail)
 
 ## Page order
 
-Hero (finished cedar board under one arm) · The Idea · The Build (12 photo steps + finished pair) · Who Could Be In It (partners) ·
-Shape of the Residency (where / how long / when / culminates) · The Boards (+ boards-on-the-wall photo) ·
-What It Celebrates · Gallery (filter tabs + lightbox) · Powder Point Bridge band · The Provenance of Rich (bio + "An Earth Story" film) · Closing invitation + links.
+Hero (finished cedar board under one arm) · The Idea · Build & Boards (photo groups: From the Tree, The Build, The Boards, On Display, In the Water) · Who Could Be In It (partners) ·
+Shape of the Residency (where / how long / when / culminates) · The Boards (proposed boards, text) ·
+What It Celebrates · Home Habitat (Powder Point Bridge band + all place photos) · The Provenance of Rich (bio + "An Earth Story" film) · Closing invitation + links.
 
 ## Design tokens (CSS variables on :root)
 
@@ -60,21 +65,25 @@ Single light theme by design. Breakpoints at 860px, 720px, 440px.
 
 Derive from these. No new fonts or colors.
 
-## Adding gallery photos
+## Adding photos
 
 1. Make two JPEGs per photo from the original (fix EXIF rotation first):
    - `gallery/<name>.jpg`   longest side 1800px, quality ~80, progressive
    - `gallery/<name>-t.jpg` longest side 640px, quality ~74
    Use lowercase, hyphenated names. Home habitat photos use the `hh-` prefix.
-2. Add a button inside `<div class="ggrid" id="ggrid">`:
+2. Place photos go in the Home Habitat grid (`<div class="hgrid">`):
    ```html
-   <button type="button" data-g="Home Habitat" data-full="gallery/<name>.jpg"
+   <button type="button" class="ph" data-full="gallery/<name>.jpg"
      data-cap="Caption." aria-label="Open photo: Caption.">
      <img src="gallery/<name>-t.jpg" alt="Caption." loading="lazy"></button>
    ```
-3. `data-g` must match a filter tab: Home Habitat, From the Tree, The Boards,
-   On Display. Build process shots live in The Build section, not the gallery.
-   Never show the same photo twice on the page. To add a group, add a matching tab button in `.gtabs`.
+   Build and board photos go in a group inside Build & Boards (`.grp` with a
+   `data-set` name and an `<ol class="cards">`, `cards tall` for upright
+   boards). Each card is `<li><figure>` + the same `.ph` button + a
+   `<figcaption>`.
+3. Every photo on the page is a `.ph` button so it opens full size in the
+   lightbox. Arrows step through the photos in the nearest `data-set`.
+   Never show the same photo twice on the page.
 4. Captions: one short line in Rich's voice. Don't name a place unless Rich
    confirmed it.
 
