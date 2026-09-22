@@ -18,7 +18,10 @@ stage. Nothing here is a commitment.
 
 - Regional, not Duxbury-specific. The theme is love and appreciation for one's
   home habitat. New England is the region; Duxbury appears only as Rich's roots.
-- The ACM is the host and has expressed enthusiasm. Everyone else (Levitate Music
+- This is a concept page for potential partners. No partnerships are established
+  yet, and the page must say so (concept notice under the hero, partner note,
+  closing line). Use "could" for anything a partner would do.
+- The ACM is the proposed host and has expressed enthusiasm. Everyone else (Levitate Music
   Festival and its emerging artists program, a high school wood arts program such
   as Duxbury High School, a white pine source, surf shops) is a *potential* partner.
 - Residency details: an 8-month artist residency at the ACM, Fall 2026 to

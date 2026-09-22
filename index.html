@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Home Is Where the Heartwood Is: a wooden surfboard residency concept hosted at the Art Complex Museum, built from New England white pine.">
+<meta name="description" content="Home Is Where the Heartwood Is: a wooden surfboard residency concept, proposed for the Art Complex Museum, built from New England white pine.">
 <meta property="og:title" content="Home Is Where the Heartwood Is">
 <meta property="og:description" content="A wooden surfboard residency concept. Local stoke, New England white pine, and love for the place you come from.">
 <meta property="og:image" content="img/hero-board.jpg">
@@ -97,6 +97,14 @@
   .hgrid img{width:100%;height:100%;object-fit:cover}
   @media (max-width:600px){.hgrid{grid-template-columns:repeat(3,1fr)}}
   @media (max-width:380px){.hgrid{grid-template-columns:repeat(2,1fr)}}
+
+  /* Concept notice */
+  .concept{background:var(--band);border-bottom:1px solid rgba(58,40,24,.12)}
+  .concept .wrap{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start;padding-block:clamp(22px,3vw,30px)}
+  .concept .dot{width:16px;height:16px;border-radius:50%;margin-top:3px;background:radial-gradient(circle at 50% 45%,var(--core) 0%,var(--sun) 50%,var(--sunset) 100%)}
+  .concept .k{font-family:var(--label);text-transform:uppercase;letter-spacing:.24em;font-size:12px;color:var(--rust);margin-bottom:6px}
+  .concept p:not(.k){color:var(--text2);max-width:72ch;font-size:16px}
+  .partners .pnote{color:var(--text2);max-width:60ch;margin:-20px 0 30px}
 
   /* Partners */
   .partners{background:var(--band)}
@@ -215,11 +223,21 @@
   <div class="wrap">
     <p class="eyebrow">A Wooden Surfboard Art Residency &middot; New England</p>
     <h1>Home Is Where<br>the Heartwood Is</h1>
-    <p class="sub">Hollow wooden surfboards, handmade from New England white pine. An art residency and exhibition at the Art Complex Museum.</p>
-    <div><span class="status">Concept stage &middot; Starting the conversation</span></div>
+    <p class="sub">Hollow wooden surfboards, handmade from New England white pine. A proposed art residency and exhibition at the Art Complex Museum.</p>
+    <div><span class="status">A concept &middot; Seeking partners</span></div>
   </div>
 </header>
 <div class="stripe" aria-hidden="true"></div>
+
+<aside class="concept" aria-label="About this page">
+  <div class="wrap">
+    <div class="dot" aria-hidden="true"></div>
+    <div>
+      <p class="k">A concept, not an announcement</p>
+      <p>This page shares an idea with potential partners. No partnerships have been established yet. Levitate Music Festival, Duxbury High School, and the other organizations named here are possible partners, not confirmed ones. The Art Complex Museum has expressed enthusiasm to host.</p>
+    </div>
+  </div>
+</aside>
 
 <section>
   <div class="wrap intro">
@@ -296,22 +314,23 @@
 <section class="partners">
   <div class="wrap">
     <p class="eyebrow">Who Could Be In It</p>
-    <h2>One host, and a circle of potential partners.</h2>
+    <h2>One proposed host, and a circle of potential partners.</h2>
+    <p class="pnote">None of these partnerships are in place yet. These are the people Rich hopes to talk with.</p>
     <div class="plist">
       <div class="partner">
-        <div class="role">Host</div>
+        <div class="role">Proposed host</div>
         <h3>Art Complex Museum</h3>
         <p>The ACM has expressed enthusiasm to host. Home of the residency: a place to build, show the work in progress, and gather the community.</p>
       </div>
       <div class="partner">
         <div class="role maybe">Potential partner</div>
         <h3>High School Wood Arts</h3>
-        <p>Students build a real surfboard alongside Rich, from rough-sawn plank to finished board. Duxbury High School's wood arts program is a natural first fit.</p>
+        <p>Students could build a real surfboard alongside Rich, from rough-sawn plank to finished board. Duxbury High School's wood arts program is a natural first fit.</p>
       </div>
       <div class="partner">
         <div class="role maybe">Potential partner</div>
         <h3>Levitate Music Festival</h3>
-        <p>The emerging artists program brings the soundtrack. Finished boards could go on display in Levitate shops.</p>
+        <p>The emerging artists program could bring the soundtrack. Finished boards could go on display in Levitate shops.</p>
       </div>
       <div class="partner">
         <div class="role maybe">Potential partner</div>
@@ -352,7 +371,7 @@
     <div class="blist">
       <div class="board"><div class="dot" aria-hidden="true"></div><div>
         <h3>The Community Board</h3>
-        <p>Built by high school students alongside Rich, in white pine. Auctioned as a fundraiser.</p>
+        <p>Could be built by high school students alongside Rich, in white pine, and auctioned as a fundraiser.</p>
         <span class="tag">Fundraiser auction</span>
       </div></div>
       <div class="board"><div class="dot" aria-hidden="true"></div><div>
@@ -362,7 +381,7 @@
       </div></div>
       <div class="board"><div class="dot" aria-hidden="true"></div><div>
         <h3>Boards for Display</h3>
-        <p>Boards for surf shops such as Levitate, bringing the project to coastal communities across New England.</p>
+        <p>Boards that could go to surf shops such as Levitate, bringing the project to coastal communities across New England.</p>
         <span class="tag">Shop display</span>
       </div></div>
       <div class="board"><div class="dot" aria-hidden="true"></div><div>
@@ -449,7 +468,7 @@
 <section class="close">
   <div class="wrap">
     <h2>Wood, place, and positive vibes for the future.</h2>
-    <p>This is a concept and an invitation. Let's talk about the residency, the boards, and how you might want to be part of it.</p>
+    <p>This is a concept and an invitation. No partnerships are in place yet. Let's talk about the residency, the boards, and how you might want to be part of it.</p>
     <div class="links">
       <a href="https://omniscopic.github.io/woodwaterwaves/" target="_blank" rel="noopener">Wood, Water &amp; Waves</a>
       <a href="https://www.richblundell.com" target="_blank" rel="noopener">richblundell.com</a>
