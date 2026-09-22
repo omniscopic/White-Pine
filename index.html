@@ -63,17 +63,19 @@
   .build .eyebrow{color:var(--creamC)}
   .build h2{color:var(--creamA);max-width:22ch}
   .build .note{color:var(--creamB);max-width:60ch;margin-top:14px;font-size:clamp(17px,1.6vw,19px)}
+  .build .cards{margin-top:clamp(24px,3vw,36px)}
+  .boardpics h2{margin-bottom:clamp(20px,3vw,32px)}
+  .boardpics h3{margin:clamp(36px,5vw,56px) 0 0}
   .build .src{margin-top:10px;font-style:italic;font-size:14.5px;color:var(--creamC);opacity:.8}
-  .grp{margin-top:clamp(40px,5vw,60px);padding-top:18px;border-top:1px solid rgba(241,219,176,.22)}
-  .grp h3{color:var(--creamA);font-size:clamp(22px,2.4vw,28px)}
   .cards{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(10px,1.6vw,18px)}
   .cards img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
   .cards.tall img{aspect-ratio:3/4}
+  .cards.tall{grid-template-columns:repeat(3,1fr)}
   .cards figcaption{color:var(--creamB);opacity:.92}
   .cards figcaption{padding-top:8px}
   .cards .step{display:block;font-family:var(--label);font-style:normal;text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--creamC);margin-bottom:4px}
   @media (max-width:860px){.cards{grid-template-columns:repeat(3,1fr)}}
-  @media (max-width:600px){.cards{grid-template-columns:repeat(2,1fr);gap:10px}.cards figcaption{font-size:13.5px}.cards .step{font-size:11px;letter-spacing:.16em}}
+  @media (max-width:600px){.cards,.cards.tall{grid-template-columns:repeat(2,1fr);gap:10px}.cards figcaption{font-size:13.5px}.cards .step{font-size:11px;letter-spacing:.16em}}
 
   /* Clickable photos */
   .ph{display:block;width:100%;padding:0;border:0;background:none;color:inherit;font:inherit;text-align:inherit;cursor:zoom-in;border-radius:3px;overflow:hidden}
@@ -236,26 +238,19 @@
 
 
 
-<section class="build" id="build-and-boards">
+<section class="build" id="the-build" data-set="The Build">
   <div class="wrap">
-    <p class="eyebrow">Build &amp; Boards</p>
+    <p class="eyebrow">The Build</p>
     <h2>Every board is built by hand, from the tree up.</h2>
     <p class="note">Hollow wooden surfboards, built in the open at the museum, from rough-sawn plank to finished board. No factory, no molds, no shortcuts. Just a design, a stack of wood, and a plane.</p>
     <p class="src">Photos from Rich's recent builds. Tap any photo to see it full size.</p>
-    <div class="grp" data-set="From the Tree">
-    <h3>From the Tree</h3>
     <ol class="cards">
-      <li><figure><button type="button" class="ph" data-full="gallery/milling-the-log.jpg" data-cap="One tree, one afternoon, and a mill small enough to carry to it." aria-label="Open photo: One tree, one afternoon, and a mill small enough to carry to it."><img src="gallery/milling-the-log-t.jpg" alt="One tree, one afternoon, and a mill small enough to carry to it." loading="lazy"></button></figure></li>
-      <li><figure><button type="button" class="ph" data-full="gallery/sawmill-blade.jpg" data-cap="The first cut. You never know what is in there until the blade tells you." aria-label="Open photo: The first cut. You never know what is in there until the blade tells you."><img src="gallery/sawmill-blade-t.jpg" alt="The first cut. You never know what is in there until the blade tells you." loading="lazy"></button></figure></li>
-      <li><figure><button type="button" class="ph" data-full="gallery/first-slabs.jpg" data-cap="Purple heartwood and cream sapwood, an inch apart, straight off the log." aria-label="Open photo: Purple heartwood and cream sapwood, an inch apart, straight off the log."><img src="gallery/first-slabs-t.jpg" alt="Purple heartwood and cream sapwood, an inch apart, straight off the log." loading="lazy"></button></figure></li>
-      <li><figure><button type="button" class="ph" data-full="gallery/plank-in-hand.jpg" data-cap="This is the color cedar keeps to itself until you open it up." aria-label="Open photo: This is the color cedar keeps to itself until you open it up."><img src="gallery/plank-in-hand-t.jpg" alt="This is the color cedar keeps to itself until you open it up." loading="lazy"></button></figure></li>
-      <li><figure><button type="button" class="ph" data-full="gallery/rough-sawn-board.jpg" data-cap="Rough-sawn, live edge still on it. All of that gets cut away, but not yet." aria-label="Open photo: Rough-sawn, live edge still on it. All of that gets cut away, but not yet."><img src="gallery/rough-sawn-board-t.jpg" alt="Rough-sawn, live edge still on it. All of that gets cut away, but not yet." loading="lazy"></button></figure></li>
-      <li><figure><button type="button" class="ph" data-full="gallery/cedar-at-the-shack.jpg" data-cap="Island cedar, live edge and all, waiting its turn at the shack door." aria-label="Open photo: Island cedar, live edge and all, waiting its turn at the shack door."><img src="gallery/cedar-at-the-shack-t.jpg" alt="Island cedar, live edge and all, waiting its turn at the shack door." loading="lazy"></button></figure></li>
-    </ol>
-    </div>
-    <div class="grp" data-set="The Build">
-    <h3>The Build</h3>
-    <ol class="cards">
+      <li><figure><button type="button" class="ph" data-full="gallery/milling-the-log.jpg" data-cap="One tree, one afternoon, and a mill small enough to carry to it." aria-label="Open photo: One tree, one afternoon, and a mill small enough to carry to it."><img src="gallery/milling-the-log-t.jpg" alt="One tree, one afternoon, and a mill small enough to carry to it." loading="lazy"></button><figcaption><span class="step">Mill the tree</span></figcaption></figure></li>
+      <li><figure><button type="button" class="ph" data-full="gallery/sawmill-blade.jpg" data-cap="The first cut. You never know what is in there until the blade tells you." aria-label="Open photo: The first cut. You never know what is in there until the blade tells you."><img src="gallery/sawmill-blade-t.jpg" alt="The first cut. You never know what is in there until the blade tells you." loading="lazy"></button><figcaption><span class="step">Open the log</span></figcaption></figure></li>
+      <li><figure><button type="button" class="ph" data-full="gallery/first-slabs.jpg" data-cap="Purple heartwood and cream sapwood, an inch apart, straight off the log." aria-label="Open photo: Purple heartwood and cream sapwood, an inch apart, straight off the log."><img src="gallery/first-slabs-t.jpg" alt="Purple heartwood and cream sapwood, an inch apart, straight off the log." loading="lazy"></button><figcaption><span class="step">First slabs</span></figcaption></figure></li>
+      <li><figure><button type="button" class="ph" data-full="gallery/plank-in-hand.jpg" data-cap="This is the color cedar keeps to itself until you open it up." aria-label="Open photo: This is the color cedar keeps to itself until you open it up."><img src="gallery/plank-in-hand-t.jpg" alt="This is the color cedar keeps to itself until you open it up." loading="lazy"></button><figcaption><span class="step">The color inside</span></figcaption></figure></li>
+      <li><figure><button type="button" class="ph" data-full="gallery/rough-sawn-board.jpg" data-cap="Rough-sawn, live edge still on it. All of that gets cut away, but not yet." aria-label="Open photo: Rough-sawn, live edge still on it. All of that gets cut away, but not yet."><img src="gallery/rough-sawn-board-t.jpg" alt="Rough-sawn, live edge still on it. All of that gets cut away, but not yet." loading="lazy"></button><figcaption><span class="step">Rough-sawn</span></figcaption></figure></li>
+      <li><figure><button type="button" class="ph" data-full="gallery/cedar-at-the-shack.jpg" data-cap="Island cedar, live edge and all, waiting its turn at the shack door." aria-label="Open photo: Island cedar, live edge and all, waiting its turn at the shack door."><img src="gallery/cedar-at-the-shack-t.jpg" alt="Island cedar, live edge and all, waiting its turn at the shack door." loading="lazy"></button><figcaption><span class="step">Let it season</span></figcaption></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/planing-strips.jpg" data-cap="Every strip gets a feathered edge by hand, so the glue-up closes without a gap." aria-label="Open photo: Every strip gets a feathered edge by hand, so the glue-up closes without a gap."><img src="gallery/planing-strips-t.jpg" alt="Every strip gets a feathered edge by hand, so the glue-up closes without a gap." loading="lazy"></button><figcaption><span class="step">Plane the strips</span></figcaption></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/deck-panel-glued.jpg" data-cap="Nine feet of deck plank, board by board, clamped down and left to set." aria-label="Open photo: Nine feet of deck plank, board by board, clamped down and left to set."><img src="gallery/deck-panel-glued-t.jpg" alt="Nine feet of deck plank, board by board, clamped down and left to set." loading="lazy"></button><figcaption><span class="step">Glue up the planks</span></figcaption></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/deck-panels-pair.jpg" data-cap="Deck and bottom out of the clamps, read side by side for grain before either gets cut." aria-label="Open photo: Deck and bottom out of the clamps, read side by side for grain before either gets cut."><img src="gallery/deck-panels-pair-t.jpg" alt="Deck and bottom out of the clamps, read side by side for grain before either gets cut." loading="lazy"></button><figcaption><span class="step">Read the grain</span></figcaption></figure></li>
@@ -266,31 +261,28 @@
       <li><figure><button type="button" class="ph" data-full="gallery/rail-strip-installed.jpg" data-cap="The first rail strip is on, and the outline it draws is already the thing your eye follows." aria-label="Open photo: The first rail strip is on, and the outline it draws is already the thing your eye follows."><img src="gallery/rail-strip-installed-t.jpg" alt="The first rail strip is on, and the outline it draws is already the thing your eye follows." loading="lazy"></button><figcaption><span class="step">Add the rails</span></figcaption></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/shaping-the-rails.jpg" data-cap="Rails get worked outside, where the dust has somewhere to go." aria-label="Open photo: Rails get worked outside, where the dust has somewhere to go."><img src="gallery/shaping-the-rails-t.jpg" alt="Rails get worked outside, where the dust has somewhere to go." loading="lazy"></button><figcaption><span class="step">Shape the rails</span></figcaption></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/sanding-block.jpg" data-cap="The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding." aria-label="Open photo: The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding."><img src="gallery/sanding-block-t.jpg" alt="The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding." loading="lazy"></button><figcaption><span class="step">Sand it fair</span></figcaption></figure></li>
+      <li><figure><button type="button" class="ph" data-full="gallery/fin-halo.jpg" data-cap="Testing a halo on the edge. A pale line that follows the curve the whole way round." aria-label="Open photo: Testing a halo on the edge. A pale line that follows the curve the whole way round."><img src="gallery/fin-halo-t.jpg" alt="Testing a halo on the edge. A pale line that follows the curve the whole way round." loading="lazy"></button><figcaption><span class="step">Test the halo</span></figcaption></figure></li>
+      <li><figure><button type="button" class="ph" data-full="gallery/rich-with-the-board.jpg" data-cap="Tung oil goes on, and the grain comes up like it has been waiting all summer to be seen." aria-label="Open photo: Tung oil goes on, and the grain comes up like it has been waiting all summer to be seen."><img src="gallery/rich-with-the-board-t.jpg" alt="Tung oil goes on, and the grain comes up like it has been waiting all summer to be seen." loading="lazy"></button><figcaption><span class="step">Oil the wood</span></figcaption></figure></li>
+      <li><figure><button type="button" class="ph" data-full="gallery/almost-done-v2.jpg" data-cap="Almost done." aria-label="Open photo: Almost done."><img src="gallery/almost-done-v2-t.jpg" alt="Almost done." loading="lazy"></button><figcaption><span class="step">Almost done</span></figcaption></figure></li>
     </ol>
-    </div>
-    <div class="grp" data-set="The Boards">
-    <h3>The Boards</h3>
+  </div>
+</section>
+
+<section class="boardpics" id="the-boards" data-set="The Boards">
+  <div class="wrap">
+    <p class="eyebrow">The Boards</p>
+    <h2>Finished, on the wall, and in the water.</h2>
     <ol class="cards tall">
-      <li><figure><button type="button" class="ph" data-full="gallery/rich-with-the-board.jpg" data-cap="Tung oil goes on, and the grain comes up like it has been waiting all summer to be seen." aria-label="Open photo: Tung oil goes on, and the grain comes up like it has been waiting all summer to be seen."><img src="gallery/rich-with-the-board-t.jpg" alt="Tung oil goes on, and the grain comes up like it has been waiting all summer to be seen." loading="lazy"></button></figure></li>
-      <li><figure><button type="button" class="ph" data-full="gallery/almost-done-v2.jpg" data-cap="Almost done." aria-label="Open photo: Almost done."><img src="gallery/almost-done-v2-t.jpg" alt="Almost done." loading="lazy"></button></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/finished-at-the-shack.jpg" data-cap="Finished. Nine feet of hollow cedar, standing at the shack door." aria-label="Open photo: Finished. Nine feet of hollow cedar, standing at the shack door."><img src="gallery/finished-at-the-shack-t.jpg" alt="Finished. Nine feet of hollow cedar, standing at the shack door." loading="lazy"></button></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/finished-sunburst-fins.jpg" data-cap="The bottom, with its sunburst fins." aria-label="Open photo: The bottom, with its sunburst fins."><img src="gallery/finished-sunburst-fins-t.jpg" alt="The bottom, with its sunburst fins." loading="lazy"></button></figure></li>
-      <li><figure><button type="button" class="ph" data-full="gallery/fin-halo.jpg" data-cap="Testing a halo on the edge. A pale line that follows the curve the whole way round." aria-label="Open photo: Testing a halo on the edge. A pale line that follows the curve the whole way round."><img src="gallery/fin-halo-t.jpg" alt="Testing a halo on the edge. A pale line that follows the curve the whole way round." loading="lazy"></button></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/three-boards-at-the-barn.jpg" data-cap="Three boards, three textures: bark, cedar, and shingle, lined up at the barn door." aria-label="Open photo: Three boards, three textures: bark, cedar, and shingle, lined up at the barn door."><img src="gallery/three-boards-at-the-barn-t.jpg" alt="Three boards, three textures: bark, cedar, and shingle, lined up at the barn door." loading="lazy"></button></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/blundell_rich_happyfamily_wood.jpg" data-cap="Twenty years of boards." aria-label="Open photo: Twenty years of boards."><img src="gallery/blundell_rich_happyfamily_wood-t.jpg" alt="Twenty years of boards." loading="lazy"></button></figure></li>
-    </ol>
-    </div>
-    <div class="grp" data-set="On Display">
-    <h3>On Display</h3>
-    <ol class="cards tall">
       <li><figure><button type="button" class="ph" data-full="img/boards-on-wall.jpg" data-cap="Three boards hung on a gallery wall." aria-label="Open photo: Three boards hung on a gallery wall."><img src="gallery/boards-on-wall-t.jpg" alt="Three boards hung on a gallery wall." loading="lazy"></button></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/stand-in-gallery.jpg" data-cap="In a gallery the board stands at eye level, where people can walk right up to it." aria-label="Open photo: In a gallery the board stands at eye level, where people can walk right up to it."><img src="gallery/stand-in-gallery-t.jpg" alt="In a gallery the board stands at eye level, where people can walk right up to it." loading="lazy"></button></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/stand-by-the-clock.jpg" data-cap="No wall, no rack. It just stands there in the room." aria-label="Open photo: No wall, no rack. It just stands there in the room."><img src="gallery/stand-by-the-clock-t.jpg" alt="No wall, no rack. It just stands there in the room." loading="lazy"></button></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/stand-by-the-stairs.jpg" data-cap="Walk all the way around it. The stand is built to be seen from every side." aria-label="Open photo: Walk all the way around it. The stand is built to be seen from every side."><img src="gallery/stand-by-the-stairs-t.jpg" alt="Walk all the way around it. The stand is built to be seen from every side." loading="lazy"></button></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/stand-with-signage.jpg" data-cap="Custom signage on matching stands, so the story stands right beside the board." aria-label="Open photo: Custom signage on matching stands, so the story stands right beside the board."><img src="gallery/stand-with-signage-t.jpg" alt="Custom signage on matching stands, so the story stands right beside the board." loading="lazy"></button></figure></li>
     </ol>
-    </div>
-    <div class="grp" data-set="In the Water">
     <h3>In the Water</h3>
     <ol class="cards">
       <li><figure><button type="button" class="ph" data-full="gallery/surf-barrel.jpg" data-cap="An earlier wooden board, in the water." aria-label="Open photo: An earlier wooden board, in the water."><img src="gallery/surf-barrel-t.jpg" alt="An earlier wooden board, in the water." loading="lazy"></button></figure></li>
@@ -298,7 +290,6 @@
       <li><figure><button type="button" class="ph" data-full="gallery/surf-nose-2.jpg" data-cap="Wood deck, green water." aria-label="Open photo: Wood deck, green water."><img src="gallery/surf-nose-2-t.jpg" alt="Wood deck, green water." loading="lazy"></button></figure></li>
       <li><figure><button type="button" class="ph" data-full="gallery/surf-nose-3.jpg" data-cap="Another wave, another look down the deck." aria-label="Open photo: Another wave, another look down the deck."><img src="gallery/surf-nose-3-t.jpg" alt="Another wave, another look down the deck." loading="lazy"></button></figure></li>
     </ol>
-    </div>
   </div>
 </section>
 
@@ -356,7 +347,7 @@
 
 <section class="boards">
   <div class="wrap">
-    <p class="eyebrow">The Boards</p>
+    <p class="eyebrow">Residency Boards</p>
     <h2>What could come out of the shop.</h2>
     <div class="blist">
       <div class="board"><div class="dot" aria-hidden="true"></div><div>

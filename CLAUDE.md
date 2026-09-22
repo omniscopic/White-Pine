@@ -45,8 +45,8 @@ gallery/     gallery photos: name.jpg (full) + name-t.jpg (thumbnail)
 
 ## Page order
 
-Hero (finished cedar board under one arm) · The Idea · Build & Boards (photo groups: From the Tree, The Build, The Boards, On Display, In the Water) · Who Could Be In It (partners) ·
-Shape of the Residency (where / how long / when / culminates) · The Boards (proposed boards, text) ·
+Hero (finished cedar board under one arm) · The Idea · The Build (tree + build process photos) · The Boards (finished boards, on display, in the water) · Who Could Be In It (partners) ·
+Shape of the Residency (where / how long / when / culminates) · Residency Boards (proposed boards, text) ·
 What It Celebrates · Home Habitat (Powder Point Bridge band + all place photos) · The Provenance of Rich (bio + "An Earth Story" film) · Closing invitation + links.
 
 ## Design tokens (CSS variables on :root)
@@ -77,10 +77,10 @@ Derive from these. No new fonts or colors.
      data-cap="Caption." aria-label="Open photo: Caption.">
      <img src="gallery/<name>-t.jpg" alt="Caption." loading="lazy"></button>
    ```
-   Build and board photos go in a group inside Build & Boards (`.grp` with a
-   `data-set` name and an `<ol class="cards">`, `cards tall` for upright
-   boards). Each card is `<li><figure>` + the same `.ph` button + a
-   `<figcaption>`.
+   Tree and build-process photos go in The Build (`<ol class="cards">`, each
+   with a short step label). Finished boards go in The Boards (`cards tall`),
+   in-the-water shots in its In the Water list. Each card is `<li><figure>` +
+   the same `.ph` button.
 3. Every photo on the page is a `.ph` button so it opens full size in the
    lightbox. Arrows step through the photos in the nearest `data-set`.
    Never show the same photo twice on the page.
