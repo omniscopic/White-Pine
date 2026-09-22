@@ -6,7 +6,7 @@
 <meta name="description" content="White Pine Homecoming: a wooden surfboard residency concept hosted at the Art Complex Museum, built from New England white pine.">
 <meta property="og:title" content="White Pine Homecoming">
 <meta property="og:description" content="A wooden surfboard residency concept. Local stoke, New England white pine, and love for the place you come from.">
-<meta property="og:image" content="img/boards-on-wall.jpg">
+<meta property="og:image" content="img/hero-board.jpg">
 <style>html,body{margin:0}</style>
 <title>White Pine Homecoming</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,9 +41,10 @@
 
   /* Hero */
   .hero{position:relative;background:var(--night);color:var(--creamA);overflow:hidden}
-  .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 28%}
-  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(42,29,18,.2) 0%,rgba(42,29,18,.42) 35%,rgba(42,29,18,.86) 100%)}
-  .hero .wrap{position:relative;z-index:1;min-height:clamp(440px,62vw,620px);display:flex;flex-direction:column;justify-content:flex-end;padding-block:48px}
+  .hero img{width:100%;height:auto;max-height:78vh;object-fit:cover;object-position:50% 50%}
+  .hero .fade{position:relative}
+  .hero .fade::after{content:"";position:absolute;left:0;right:0;bottom:0;height:35%;background:linear-gradient(180deg,rgba(42,29,18,0) 0%,var(--night) 100%)}
+  .hero .wrap{position:relative;z-index:1;margin-top:clamp(-90px,-6vw,-24px);padding-block:0 clamp(40px,5vw,64px)}
   .hero .eyebrow{color:var(--creamC);text-shadow:0 1px 10px rgba(0,0,0,.45)}
   .hero h1{color:var(--creamA);font-size:clamp(46px,8.4vw,112px);line-height:.96;text-shadow:0 2px 30px rgba(0,0,0,.35)}
   .hero .sub{text-shadow:0 1px 12px rgba(0,0,0,.4);font-style:italic;font-size:clamp(18px,2.2vw,24px);color:var(--creamB);max-width:34ch;margin-top:20px;line-height:1.45}
@@ -62,14 +63,16 @@
   .build .eyebrow{color:var(--creamC)}
   .build h2{color:var(--creamA);max-width:22ch}
   .build .note{color:var(--creamB);max-width:60ch;margin-top:14px;font-size:clamp(17px,1.6vw,19px)}
-  .steps{list-style:none;margin:clamp(28px,4vw,40px) 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(18px,2.6vw,30px)}
+  .steps{list-style:none;margin:clamp(28px,4vw,40px) 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(18px,2.6vw,30px)}
   .steps img{width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:3px}
   .steps figcaption{color:var(--creamB);opacity:.92}
   .steps .step,.finished .step{display:block;font-family:var(--label);font-style:normal;text-transform:uppercase;letter-spacing:.22em;font-size:12px;color:var(--creamC);margin-bottom:4px}
   .finished{margin-top:clamp(28px,4vw,40px)}
-  .finished img{width:100%;aspect-ratio:3/1;object-fit:cover;border-radius:3px}
+  .finished .pair{display:grid;grid-template-columns:1fr 1fr;gap:clamp(12px,2vw,22px)}
+  .finished img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:3px}
   .finished figcaption{color:var(--creamB);opacity:.92}
   .build .src{margin-top:22px;font-style:italic;font-size:14.5px;color:var(--creamC);opacity:.8}
+  @media (max-width:860px){.steps{grid-template-columns:repeat(3,1fr)}}
   @media (max-width:720px){.steps{grid-template-columns:repeat(2,1fr)}}
   @media (max-width:440px){.steps{grid-template-columns:1fr}}
 
@@ -86,6 +89,10 @@
   .partner p{font-size:15.5px;color:var(--text2)}
 
   /* Boards */
+  .wall{margin-top:clamp(28px,4vw,44px)}
+  .wall img{width:100%;aspect-ratio:16/9;object-fit:cover;object-position:50% 30%;border-radius:3px}
+  .wall figcaption{color:var(--creamB);opacity:.9}
+  @media (max-width:720px){.wall img{aspect-ratio:4/3}}
   .boards{background:var(--deep);color:var(--creamB)}
   .boards .eyebrow{color:var(--creamC)}
   .boards h2{color:var(--creamA);margin-bottom:36px;max-width:20ch}
@@ -199,7 +206,7 @@
 <body>
 
 <header class="hero">
-  <img src="img/boards-on-wall.jpg" alt="Three of Rich's hollow wooden surfboards hanging on a sunlit gallery wall, one covered in bark, one in cedar, one in shingles">
+  <div class="fade"><img src="img/hero-board.jpg" alt="A finished nine-foot hollow cedar surfboard, carried under one arm"></div>
   <div class="wrap">
     <p class="eyebrow">A Wooden Surfboard Art Residency &middot; New England</p>
     <h1>White Pine<br>Homecoming</h1>
@@ -232,14 +239,23 @@
     <p class="note">Hollow wooden surfboards, built in the open at the museum, from rough-sawn plank to finished board. No factory, no molds, no shortcuts. Just a design, a stack of wood, and a plane.</p>
     <ol class="steps">
       <li><figure><img src="gallery/milling-the-log-t.jpg" alt="One tree, one afternoon, and a mill small enough to carry to it." loading="lazy"><figcaption><span class="step">Mill the tree</span>One tree, one afternoon, and a mill small enough to carry to it.</figcaption></figure></li>
+      <li><figure><img src="gallery/sawmill-blade-t.jpg" alt="The first cut. You never know what is in there until the blade tells you." loading="lazy"><figcaption><span class="step">Open the log</span>The first cut. You never know what is in there until the blade tells you.</figcaption></figure></li>
       <li><figure><img src="gallery/planing-strips-t.jpg" alt="Every strip gets a feathered edge by hand, so the glue-up closes without a gap." loading="lazy"><figcaption><span class="step">Plane the strips</span>Every strip gets a feathered edge by hand, so the glue-up closes without a gap.</figcaption></figure></li>
       <li><figure><img src="gallery/deck-panel-glued-t.jpg" alt="Nine feet of deck plank, board by board, clamped down and left to set." loading="lazy"><figcaption><span class="step">Glue up the planks</span>Nine feet of deck plank, board by board, clamped down and left to set.</figcaption></figure></li>
+      <li><figure><img src="gallery/deck-panels-pair-t.jpg" alt="Deck and bottom out of the clamps, read side by side for grain before either gets cut." loading="lazy"><figcaption><span class="step">Read the grain</span>Deck and bottom out of the clamps, read side by side for grain before either gets cut.</figcaption></figure></li>
+      <li><figure><img src="gallery/outline-template-t.jpg" alt="The outline comes off the drawing and lies down on the wood. Last chance to change your mind." loading="lazy"><figcaption><span class="step">Lay out the outline</span>The outline comes off the drawing and lies down on the wood. Last chance to change your mind.</figcaption></figure></li>
       <li><figure><img src="gallery/hull-on-the-bench-t.jpg" alt="The skeleton has a floor at last. Ribs down on the bottom plank, nose block and all." loading="lazy"><figcaption><span class="step">Frame the hull</span>The skeleton has a floor at last. Ribs down on the bottom plank, nose block and all.</figcaption></figure></li>
+      <li><figure><img src="gallery/hull-from-the-tail-t.jpg" alt="Nine feet of it from the tail, and everything is where the drawing said it would be." loading="lazy"><figcaption><span class="step">Check the lines</span>Nine feet of it from the tail, and everything is where the drawing said it would be.</figcaption></figure></li>
+      <li><figure><img src="gallery/sunburst-wings-t.jpg" alt="Sunburst cedar. Red heartwood and white, laid up ray by ray." loading="lazy"><figcaption><span class="step">Lay up the fins</span>Sunburst cedar. Red heartwood and white, laid up ray by ray.</figcaption></figure></li>
+      <li><figure><img src="gallery/rail-strip-installed-t.jpg" alt="The first rail strip is on, and the outline it draws is already the thing your eye follows." loading="lazy"><figcaption><span class="step">Add the rails</span>The first rail strip is on, and the outline it draws is already the thing your eye follows.</figcaption></figure></li>
       <li><figure><img src="gallery/shaping-the-rails-t.jpg" alt="Rails get worked outside, where the dust has somewhere to go." loading="lazy"><figcaption><span class="step">Shape the rails</span>Rails get worked outside, where the dust has somewhere to go.</figcaption></figure></li>
       <li><figure><img src="gallery/sanding-block-t.jpg" alt="The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding." loading="lazy"><figcaption><span class="step">Sand it fair</span>The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding.</figcaption></figure></li>
     </ol>
     <figure class="finished">
-      <img src="gallery/finished-under-arm.jpg" alt="The finished nine-foot hollow cedar board, carried under one arm" loading="lazy">
+      <div class="pair">
+        <img src="gallery/finished-at-the-shack.jpg" alt="The finished nine-foot hollow cedar board standing at the shack door" loading="lazy">
+        <img src="gallery/finished-sunburst-fins.jpg" alt="The bottom of the finished board, with its sunburst fins" loading="lazy">
+      </div>
       <figcaption><span class="step">Finished</span>Nine feet of hollow cedar. From tree to board, by hand.</figcaption>
     </figure>
     <p class="src">Photos from Rich's recent builds.</p>
@@ -324,6 +340,10 @@
         <span class="tag">Music &amp; stoke</span>
       </div></div>
     </div>
+    <figure class="wall">
+      <img src="img/boards-on-wall.jpg" alt="Three of Rich's hollow wooden surfboards hanging on a sunlit gallery wall, one covered in bark, one in cedar, one in shingles" loading="lazy">
+      <figcaption>Three boards hung on a gallery wall.</figcaption>
+    </figure>
   </div>
 </section>
 
@@ -341,7 +361,7 @@
     <p class="eyebrow">Gallery</p>
     <h2>Home habitat, and the boards that come from it.</h2>
     <p class="note">Photos of the New England coast Rich calls home, and of recent work: a nine-foot hollow longboard, milled from a single Nantucket cedar and built by hand. The residency boards would follow the same path in New England white pine.</p>
-    <div class="gtabs" role="group" aria-label="Filter photos"><button type="button" aria-pressed="true" data-g="all">All</button><button type="button" aria-pressed="false" data-g="Home Habitat">Home Habitat</button><button type="button" aria-pressed="false" data-g="From the Tree">From the Tree</button><button type="button" aria-pressed="false" data-g="The Build">The Build</button><button type="button" aria-pressed="false" data-g="The Boards">The Boards</button><button type="button" aria-pressed="false" data-g="On Display">On Display</button></div>
+    <div class="gtabs" role="group" aria-label="Filter photos"><button type="button" aria-pressed="true" data-g="all">All</button><button type="button" aria-pressed="false" data-g="Home Habitat">Home Habitat</button><button type="button" aria-pressed="false" data-g="From the Tree">From the Tree</button><button type="button" aria-pressed="false" data-g="The Boards">The Boards</button><button type="button" aria-pressed="false" data-g="On Display">On Display</button></div>
     <div class="ggrid" id="ggrid">
       <button type="button" data-g="Home Habitat" data-full="gallery/hh-white-pines.jpg" data-cap="White pines, looking straight up." aria-label="Open photo: White pines, looking straight up."><img src="gallery/hh-white-pines-t.jpg" alt="White pines, looking straight up." loading="lazy"></button>
       <button type="button" data-g="Home Habitat" data-full="gallery/hh-evergreen.jpg" data-cap="An evergreen holding the last light." aria-label="Open photo: An evergreen holding the last light."><img src="gallery/hh-evergreen-t.jpg" alt="An evergreen holding the last light." loading="lazy"></button>
@@ -367,33 +387,15 @@
       <button type="button" data-g="Home Habitat" data-full="gallery/hh-canal-bridge.jpg" data-cap="The bridge over the Cape Cod Canal at dusk." aria-label="Open photo: The bridge over the Cape Cod Canal at dusk."><img src="gallery/hh-canal-bridge-t.jpg" alt="The bridge over the Cape Cod Canal at dusk." loading="lazy"></button>
       <button type="button" data-g="Home Habitat" data-full="gallery/hh-boat-shop.jpg" data-cap="Drawing lines on the boat shop floor." aria-label="Open photo: Drawing lines on the boat shop floor."><img src="gallery/hh-boat-shop-t.jpg" alt="Drawing lines on the boat shop floor." loading="lazy"></button>
       <button type="button" data-g="Home Habitat" data-full="gallery/hh-peach.jpg" data-cap="Summer fruit, straight off the tree." aria-label="Open photo: Summer fruit, straight off the tree."><img src="gallery/hh-peach-t.jpg" alt="Summer fruit, straight off the tree." loading="lazy"></button>
-      <button type="button" data-g="From the Tree" data-full="gallery/milling-the-log.jpg" data-cap="One tree, one afternoon, and a mill small enough to carry to it." aria-label="Open photo: One tree, one afternoon, and a mill small enough to carry to it."><img src="gallery/milling-the-log-t.jpg" alt="One tree, one afternoon, and a mill small enough to carry to it." loading="lazy"></button>
-<button type="button" data-g="From the Tree" data-full="gallery/sawmill-blade.jpg" data-cap="The first cut. You never know what is in there until the blade tells you." aria-label="Open photo: The first cut. You never know what is in there until the blade tells you."><img src="gallery/sawmill-blade-t.jpg" alt="The first cut. You never know what is in there until the blade tells you." loading="lazy"></button>
-<button type="button" data-g="From the Tree" data-full="gallery/first-slabs.jpg" data-cap="Purple heartwood and cream sapwood, an inch apart, straight off the log." aria-label="Open photo: Purple heartwood and cream sapwood, an inch apart, straight off the log."><img src="gallery/first-slabs-t.jpg" alt="Purple heartwood and cream sapwood, an inch apart, straight off the log." loading="lazy"></button>
+      <button type="button" data-g="From the Tree" data-full="gallery/first-slabs.jpg" data-cap="Purple heartwood and cream sapwood, an inch apart, straight off the log." aria-label="Open photo: Purple heartwood and cream sapwood, an inch apart, straight off the log."><img src="gallery/first-slabs-t.jpg" alt="Purple heartwood and cream sapwood, an inch apart, straight off the log." loading="lazy"></button>
 <button type="button" data-g="From the Tree" data-full="gallery/plank-in-hand.jpg" data-cap="This is the color cedar keeps to itself until you open it up." aria-label="Open photo: This is the color cedar keeps to itself until you open it up."><img src="gallery/plank-in-hand-t.jpg" alt="This is the color cedar keeps to itself until you open it up." loading="lazy"></button>
 <button type="button" data-g="From the Tree" data-full="gallery/rough-sawn-board.jpg" data-cap="Rough-sawn, live edge still on it. All of that gets cut away, but not yet." aria-label="Open photo: Rough-sawn, live edge still on it. All of that gets cut away, but not yet."><img src="gallery/rough-sawn-board-t.jpg" alt="Rough-sawn, live edge still on it. All of that gets cut away, but not yet." loading="lazy"></button>
 <button type="button" data-g="From the Tree" data-full="gallery/cedar-at-the-shack.jpg" data-cap="Island cedar, live edge and all, waiting its turn at the shack door." aria-label="Open photo: Island cedar, live edge and all, waiting its turn at the shack door."><img src="gallery/cedar-at-the-shack-t.jpg" alt="Island cedar, live edge and all, waiting its turn at the shack door." loading="lazy"></button>
-<button type="button" data-g="The Build" data-full="gallery/planing-strips.jpg" data-cap="Every strip gets a feathered edge by hand, so the glue-up closes without a gap." aria-label="Open photo: Every strip gets a feathered edge by hand, so the glue-up closes without a gap."><img src="gallery/planing-strips-t.jpg" alt="Every strip gets a feathered edge by hand, so the glue-up closes without a gap." loading="lazy"></button>
-<button type="button" data-g="The Build" data-full="gallery/sunburst-wings.jpg" data-cap="Sunburst cedar. Red heartwood and white, laid up ray by ray." aria-label="Open photo: Sunburst cedar. Red heartwood and white, laid up ray by ray."><img src="gallery/sunburst-wings-t.jpg" alt="Sunburst cedar. Red heartwood and white, laid up ray by ray." loading="lazy"></button>
-<button type="button" data-g="The Build" data-full="gallery/deck-panel-glued.jpg" data-cap="Nine feet of deck plank, board by board, clamped down and left to set." aria-label="Open photo: Nine feet of deck plank, board by board, clamped down and left to set."><img src="gallery/deck-panel-glued-t.jpg" alt="Nine feet of deck plank, board by board, clamped down and left to set." loading="lazy"></button>
-<button type="button" data-g="The Build" data-full="gallery/deck-panels-pair.jpg" data-cap="Deck and bottom out of the clamps, read side by side for grain before either gets cut." aria-label="Open photo: Deck and bottom out of the clamps, read side by side for grain before either gets cut."><img src="gallery/deck-panels-pair-t.jpg" alt="Deck and bottom out of the clamps, read side by side for grain before either gets cut." loading="lazy"></button>
-<button type="button" data-g="The Build" data-full="gallery/outline-template.jpg" data-cap="The outline comes off the drawing and lies down on the wood. Last chance to change your mind." aria-label="Open photo: The outline comes off the drawing and lies down on the wood. Last chance to change your mind."><img src="gallery/outline-template-t.jpg" alt="The outline comes off the drawing and lies down on the wood. Last chance to change your mind." loading="lazy"></button>
-<button type="button" data-g="The Build" data-full="gallery/hull-on-the-bench.jpg" data-cap="The skeleton has a floor at last. Ribs down on the bottom plank, nose block and all." aria-label="Open photo: The skeleton has a floor at last. Ribs down on the bottom plank, nose block and all."><img src="gallery/hull-on-the-bench-t.jpg" alt="The skeleton has a floor at last. Ribs down on the bottom plank, nose block and all." loading="lazy"></button>
-<button type="button" data-g="The Build" data-full="gallery/hull-from-the-tail.jpg" data-cap="Nine feet of it from the tail, and everything is where the drawing said it would be." aria-label="Open photo: Nine feet of it from the tail, and everything is where the drawing said it would be."><img src="gallery/hull-from-the-tail-t.jpg" alt="Nine feet of it from the tail, and everything is where the drawing said it would be." loading="lazy"></button>
-<button type="button" data-g="The Build" data-full="gallery/rail-strip-installed.jpg" data-cap="The first rail strip is on, and the outline it draws is already the thing your eye follows." aria-label="Open photo: The first rail strip is on, and the outline it draws is already the thing your eye follows."><img src="gallery/rail-strip-installed-t.jpg" alt="The first rail strip is on, and the outline it draws is already the thing your eye follows." loading="lazy"></button>
-<button type="button" data-g="The Build" data-full="gallery/shaping-the-rails.jpg" data-cap="Rails get worked outside, where the dust has somewhere to go." aria-label="Open photo: Rails get worked outside, where the dust has somewhere to go."><img src="gallery/shaping-the-rails-t.jpg" alt="Rails get worked outside, where the dust has somewhere to go." loading="lazy"></button>
-<button type="button" data-g="The Build" data-full="gallery/sanding-block.jpg" data-cap="The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding." aria-label="Open photo: The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding."><img src="gallery/sanding-block-t.jpg" alt="The only way to get a fair curve is with a straight-edged sanding block and six hours of sanding." loading="lazy"></button>
 <button type="button" data-g="The Boards" data-full="gallery/rich-with-the-board.jpg" data-cap="Tung oil goes on, and the grain comes up like it has been waiting all summer to be seen." aria-label="Open photo: Tung oil goes on, and the grain comes up like it has been waiting all summer to be seen."><img src="gallery/rich-with-the-board-t.jpg" alt="Tung oil goes on, and the grain comes up like it has been waiting all summer to be seen." loading="lazy"></button>
 <button type="button" data-g="The Boards" data-full="gallery/almost-done-v2.jpg" data-cap="Almost done." aria-label="Open photo: Almost done."><img src="gallery/almost-done-v2-t.jpg" alt="Almost done." loading="lazy"></button>
-<button type="button" data-g="The Boards" data-full="gallery/finished-at-the-shack.jpg" data-cap="Finished. Nine feet of hollow cedar, standing at the shack door." aria-label="Open photo: Finished. Nine feet of hollow cedar, standing at the shack door."><img src="gallery/finished-at-the-shack-t.jpg" alt="Finished. Nine feet of hollow cedar, standing at the shack door." loading="lazy"></button>
-<button type="button" data-g="The Boards" data-full="gallery/finished-sunburst-fins.jpg" data-cap="The bottom, with its sunburst fins." aria-label="Open photo: The bottom, with its sunburst fins."><img src="gallery/finished-sunburst-fins-t.jpg" alt="The bottom, with its sunburst fins." loading="lazy"></button>
-<button type="button" data-g="The Boards" data-full="gallery/finished-under-arm.jpg" data-cap="Nine feet of cedar, under one arm." aria-label="Open photo: Nine feet of cedar, under one arm."><img src="gallery/finished-under-arm-t.jpg" alt="Nine feet of cedar, under one arm." loading="lazy"></button>
-<button type="button" data-g="The Boards" data-full="gallery/board-at-the-shack-door.jpg" data-cap="The board now stands where the raw planks once stood outside the shack door." aria-label="Open photo: The board now stands where the raw planks once stood outside the shack door."><img src="gallery/board-at-the-shack-door-t.jpg" alt="The board now stands where the raw planks once stood outside the shack door." loading="lazy"></button>
 <button type="button" data-g="The Boards" data-full="gallery/fin-halo.jpg" data-cap="Testing a halo on the edge. A pale line that follows the curve the whole way round." aria-label="Open photo: Testing a halo on the edge. A pale line that follows the curve the whole way round."><img src="gallery/fin-halo-t.jpg" alt="Testing a halo on the edge. A pale line that follows the curve the whole way round." loading="lazy"></button>
 <button type="button" data-g="The Boards" data-full="gallery/three-boards-at-the-barn.jpg" data-cap="Three boards, three textures: bark, cedar, and shingle, lined up at the barn door." aria-label="Open photo: Three boards, three textures: bark, cedar, and shingle, lined up at the barn door."><img src="gallery/three-boards-at-the-barn-t.jpg" alt="Three boards, three textures: bark, cedar, and shingle, lined up at the barn door." loading="lazy"></button>
-<button type="button" data-g="The Boards" data-full="gallery/richquiver.jpg" data-cap="Rich with his quiver of wooden surfboards." aria-label="Open photo: Rich with his quiver of wooden surfboards."><img src="gallery/richquiver-t.jpg" alt="Rich with his quiver of wooden surfboards." loading="lazy"></button>
 <button type="button" data-g="The Boards" data-full="gallery/blundell_rich_happyfamily_wood.jpg" data-cap="Twenty years of boards." aria-label="Open photo: Twenty years of boards."><img src="gallery/blundell_rich_happyfamily_wood-t.jpg" alt="Twenty years of boards." loading="lazy"></button>
-<button type="button" data-g="On Display" data-full="gallery/boards-in-gallery.jpg" data-cap="Three boards hung on a gallery wall." aria-label="Open photo: Three boards hung on a gallery wall."><img src="gallery/boards-in-gallery-t.jpg" alt="Three boards hung on a gallery wall." loading="lazy"></button>
 <button type="button" data-g="On Display" data-full="gallery/stand-in-gallery.jpg" data-cap="In a gallery the board stands at eye level, where people can walk right up to it." aria-label="Open photo: In a gallery the board stands at eye level, where people can walk right up to it."><img src="gallery/stand-in-gallery-t.jpg" alt="In a gallery the board stands at eye level, where people can walk right up to it." loading="lazy"></button>
 <button type="button" data-g="On Display" data-full="gallery/stand-by-the-clock.jpg" data-cap="No wall, no rack. It just stands there in the room." aria-label="Open photo: No wall, no rack. It just stands there in the room."><img src="gallery/stand-by-the-clock-t.jpg" alt="No wall, no rack. It just stands there in the room." loading="lazy"></button>
 <button type="button" data-g="On Display" data-full="gallery/stand-by-the-stairs.jpg" data-cap="Walk all the way around it. The stand is built to be seen from every side." aria-label="Open photo: Walk all the way around it. The stand is built to be seen from every side."><img src="gallery/stand-by-the-stairs-t.jpg" alt="Walk all the way around it. The stand is built to be seen from every side." loading="lazy"></button>

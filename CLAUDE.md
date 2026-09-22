@@ -40,8 +40,8 @@ gallery/     gallery photos: name.jpg (full) + name-t.jpg (thumbnail)
 
 ## Page order
 
-Hero (boards on a gallery wall) · The Idea · The Build (6 photo steps) · Who Could Be In It (partners) ·
-Shape of the Residency (where / how long / when / culminates) · The Boards ·
+Hero (finished cedar board under one arm) · The Idea · The Build (12 photo steps + finished pair) · Who Could Be In It (partners) ·
+Shape of the Residency (where / how long / when / culminates) · The Boards (+ boards-on-the-wall photo) ·
 What It Celebrates · Gallery (filter tabs + lightbox) · Powder Point Bridge band · The Provenance of Rich (bio + "An Earth Story" film) · Closing invitation + links.
 
 ## Design tokens (CSS variables on :root)
@@ -72,8 +72,9 @@ Derive from these. No new fonts or colors.
      data-cap="Caption." aria-label="Open photo: Caption.">
      <img src="gallery/<name>-t.jpg" alt="Caption." loading="lazy"></button>
    ```
-3. `data-g` must match a filter tab: Home Habitat, From the Tree, The Build,
-   The Boards, On Display. To add a group, add a matching tab button in `.gtabs`.
+3. `data-g` must match a filter tab: Home Habitat, From the Tree, The Boards,
+   On Display. Build process shots live in The Build section, not the gallery.
+   Never show the same photo twice on the page. To add a group, add a matching tab button in `.gtabs`.
 4. Captions: one short line in Rich's voice. Don't name a place unless Rich
    confirmed it.
 
